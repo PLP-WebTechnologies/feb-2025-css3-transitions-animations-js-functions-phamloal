@@ -1,0 +1,118 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS3 Animations & localStorage Demo</title>
+    <meta name="description" content="CSS3 Animation and localStorage Demo" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header animate-fade-in">
+        <h1>CSS3 Animations & localStorage</h1>
+        <p class="subtitle">Customize your theme and see the animations in action</p>
+      </header>
+      
+      <div class="cards-container">
+        <div class="animated-card" style="animation-delay: 200ms;">
+          <div class="card-header">
+            <h2>About This Demo</h2>
+            <p>Features and technologies used</p>
+          </div>
+          <div class="card-content">
+            <ul class="feature-list">
+              <li>CSS3 transitions for smooth interface interactions</li>
+              <li>Custom animations with configurable speeds</li>
+              <li>Theme color preferences that persist with localStorage</li>
+              <li>Animation speed settings saved between sessions</li>
+              <li>Animated components with dynamic properties</li>
+              <li>JavaScript event-triggered animations</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="animated-card" style="animation-delay: 400ms;">
+          <div class="card-header">
+            <h2>Why Animations Matter</h2>
+            <p>Benefits of good UI animations</p>
+          </div>
+          <div class="card-content">
+            <ul class="feature-list">
+              <li>Provide visual feedback for user interactions</li>
+              <li>Create a sense of direct manipulation of objects</li>
+              <li>Help users understand spatial relationships</li>
+              <li>Guide attention to important elements</li>
+              <li>Add personality and polish to your application</li>
+              <li>Improve perceived performance of load times</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="customizer animate-fade-in">
+        <div class="animated-card" style="animation-delay: 100ms;">
+          <div class="card-header">
+            <h2>Theme Customizer</h2>
+            <p>Customize your theme and animations</p>
+          </div>
+          <div class="card-content">
+            <div class="customizer-section">
+              <h3>Choose a Theme Color</h3>
+              <div class="colors-container">
+                <button class="theme-color blue active" data-color="#3b82f6" aria-label="Set theme to Blue"></button>
+                <button class="theme-color red" data-color="#ef4444" aria-label="Set theme to Red"></button>
+                <button class="theme-color green" data-color="#10b981" aria-label="Set theme to Green"></button>
+                <button class="theme-color purple" data-color="#8b5cf6" aria-label="Set theme to Purple"></button>
+                <button class="theme-color orange" data-color="#f97316" aria-label="Set theme to Orange"></button>
+                <button class="theme-color pink" data-color="#ec4899" aria-label="Set theme to Pink"></button>
+              </div>
+            </div>
+
+            <div class="separator"></div>
+
+            <div class="customizer-section">
+              <h3>Animation Speed</h3>
+              <div class="speed-container">
+                <button class="speed-option" data-speed="slow">Slow</button>
+                <button class="speed-option active" data-speed="normal">Normal</button>
+                <button class="speed-option" data-speed="fast">Fast</button>
+              </div>
+            </div>
+
+            <div class="separator"></div>
+
+            <div class="customizer-section">
+              <h3>Preview Effects</h3>
+              <div class="preview-buttons">
+                <button class="btn-animated">Animated Button</button>
+                <button class="btn-animated outline">Outline Button</button>
+              </div>
+            </div>
+
+            <div class="separator"></div>
+            
+            <div class="footer">
+              <p class="hint">Your preferences are automatically saved to local storage.</p>
+              <button class="btn-reset">Reset</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-note animate-fade-in" style="animation-delay: 600ms;">
+        <p>Your preferences will be saved automatically and restored when you return.</p>
+        <button class="btn-learn hover-underline">Learn More About CSS Animations</button>
+      </div>
+    </div>
+
+    <div class="toast" id="toast">
+      <div class="toast-content">
+        <p id="toast-message"></p>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
